@@ -2,5 +2,5 @@ package math;
 
 public interface MathematicalOperations {
 
-    public int multiplyAndAdd();
+    public int multiplyAndAdd(int[] arrayA, int[] arrayB);
 }

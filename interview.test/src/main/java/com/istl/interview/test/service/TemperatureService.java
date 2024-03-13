@@ -4,6 +4,7 @@ import com.istl.interview.test.dto.TemperatureDTO;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.Random;
 
 @Service
@@ -19,8 +20,23 @@ public class TemperatureService {
 
     //region Methods
 
+    /**
+     *
+     * @param temperatureDTO
+     * @return two decimal place version of temperatureDTO
+     */
+    private TemperatureDTO toTwoDecimalPlace(TemperatureDTO temperatureDTO) {
+
+        if (temperatureDTO == null) {
+            return null;
+        }else{
+            return new TemperatureDTO(temperatureDTO.getTimestamp(),
+                    Math.round(temperatureDTO.getValue() * 100) / 100.0f);
+        }
+    }
+
     public TemperatureDTO getPreviousTemperature() {
-        return previousTemperature;
+        return toTwoDecimalPlace(previousTemperature);
     }
 
     /**
@@ -36,7 +52,7 @@ public class TemperatureService {
         previousTemperature = currentTemperature;
 
         //return value
-        return currentTemperature;
+        return toTwoDecimalPlace(currentTemperature);
     }
 
     /**
