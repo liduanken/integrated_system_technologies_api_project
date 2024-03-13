@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <th:block th:include="fragments/scripts :: bulma"></th:block>
+    <th:block th:include="fragments/scripts :: fontawesome"></th:block>
+    <th:block th:include="fragments/scripts :: chartjs"></th:block>
+</head>
+
+<style>
+    body {
+        background: #edecf3;
+    }
+</style>
+
+<body>
+
+<section class="hero is-fullheight overlay">
+    <div class="hero-body">
+        <div class="container">
+
+            <div class="columns is-centered box">
+                <div class="column is-12" >
+                    <canvas id="temperature_line_chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script th:src="@{/public/js/chart.js}"></script>
+</body>
+</html>
