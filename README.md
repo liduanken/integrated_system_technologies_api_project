@@ -1,6 +1,6 @@
-# NTU-IST KTP Associate Coding Task #
+# Integrated Systems Technologies - Temperature System Project  #
 ## Introduction ##
-This is Li Duan's coding task for the KTP Associate at Nottingham Trent University and IST Ltd. This task includes three parts
+This is Li Duan's project at [Integrated Systems Technologies Ltd](https://istl.com/). This project includes three parts
     1. Make API Endpoint for two-decimal value returning (JS)
     2. Plot current temperatures on a chart using ChartJS (JS)
     3. Design a method called 'multiplyAndAdd' for mathematical operation (Java)
